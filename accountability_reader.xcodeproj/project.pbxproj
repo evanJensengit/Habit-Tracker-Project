@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE562E272509F58700C50C25 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE562E262509F58700C50C25 /* main.cpp */; };
+		CE562E2F2509F85E00C50C25 /* weeklydata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE562E2D2509F85E00C50C25 /* weeklydata.cpp */; };
+		CE562E322509FA6400C50C25 /* singleDayData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE562E302509FA6400C50C25 /* singleDayData.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		CE562E232509F58700C50C25 /* accountability_reader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = accountability_reader; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE562E262509F58700C50C25 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CE562E2D2509F85E00C50C25 /* weeklydata.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = weeklydata.cpp; sourceTree = "<group>"; };
+		CE562E2E2509F85E00C50C25 /* weeklydata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = weeklydata.h; sourceTree = "<group>"; };
+		CE562E302509FA6400C50C25 /* singleDayData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = singleDayData.cpp; sourceTree = "<group>"; };
+		CE562E312509FA6400C50C25 /* singleDayData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singleDayData.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				CE562E262509F58700C50C25 /* main.cpp */,
+				CE562E302509FA6400C50C25 /* singleDayData.cpp */,
+				CE562E312509FA6400C50C25 /* singleDayData.h */,
+				CE562E2D2509F85E00C50C25 /* weeklydata.cpp */,
+				CE562E2E2509F85E00C50C25 /* weeklydata.h */,
 			);
 			path = accountability_reader;
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE562E2F2509F85E00C50C25 /* weeklydata.cpp in Sources */,
+				CE562E322509FA6400C50C25 /* singleDayData.cpp in Sources */,
 				CE562E272509F58700C50C25 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

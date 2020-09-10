@@ -5,11 +5,35 @@
 //  Created by Evan Jensen on 9/9/20.
 //  Copyright © 2020 Evan Jensen. All rights reserved.
 //
+//it has to be submitted in the google doc in a practical way
+//to avoid redundant functions to deal with the data
+//somehow pull the time from online so that it updates weekly with
+//data of this last week.
 
 #include <iostream>
+#include <fstream>
+#include <string>
+#include "weeklydata.h"
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-   // insert code here...
-   std::cout << "Hello, World!\n";
+int main() {
+   ofstream myOfile;
+   myOfile.open ("accountability.txt", std::ios_base::app);
+   myOfile.close();
+  
+   string line;
+   ifstream myfile ("accountabilityInput.txt");
+   if (myfile.is_open())
+   {
+      while ( getline (myfile, line) )
+      {
+         cout << line << '\n';
+      }
+      myfile.close();
+   }
+   
+   else cout << "Unable to open file";
+
+   
    return 0;
 }
