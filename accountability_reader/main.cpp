@@ -10,10 +10,12 @@
 //somehow pull the time from online so that it updates weekly with
 //data of this last week.
 
-#include <iostream>
-#include <fstream>
-#include <string>
+
+
+
 #include "weeklydata.h"
+#include "singleDayData.h"
+
 using namespace std;
 
 int main() {
@@ -23,6 +25,14 @@ int main() {
   
    string line;
    ifstream myfile ("accountabilityInput.txt");
+   singleDayData day(myfile);
+   
+   singleDayData day1;
+//   day1.createDay(myfile);
+   
+   
+   
+   
    if (myfile.is_open())
    {
       while ( getline (myfile, line) )
