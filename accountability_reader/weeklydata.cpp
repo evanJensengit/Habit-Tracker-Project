@@ -7,3 +7,14 @@
 //
 
 #include "weeklydata.h"
+weeklydata::weeklydata(ifstream& file) {
+   
+   
+  
+ //  day1.displayDay();
+   for (int i = 0; i < (sizeof(week)/sizeof(*week)); i++) {
+   singleDayData day(file);
+      //singleDayData day1 = new singleDayData(ifstream);
+      week[i] = day;
+   }
+}

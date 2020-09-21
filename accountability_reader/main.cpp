@@ -19,6 +19,8 @@
 using namespace std;
 
 int main() {
+   
+   
    ofstream myOfile;
    myOfile.open ("accountability.txt", std::ios_base::app);
    myOfile.close();
@@ -28,7 +30,8 @@ int main() {
    singleDayData day(myfile);
    
    singleDayData day1;
-//   day1.createDay(myfile);
+   day1.displayDay();
+   
    
    
    

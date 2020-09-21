@@ -18,13 +18,13 @@ using namespace std;
 class weeklydata {
 public:
    weeklydata();
-   weeklydata sortFile(ifstream);  //takes in file to be read
+   weeklydata(ifstream&);
+   weeklydata sortFile(ifstream&);  //takes in file to be read
                               //sorted function creates
                               //a sorted class object that
                               //will display the week
 private:
-   
-   int daysLogged;
+  singleDayData week[7];
    
    
 

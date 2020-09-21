@@ -45,6 +45,8 @@ public:
    singleDayData();
    singleDayData(ifstream&);
    singleDayData createDay(ifstream&);
+   singleDayData& operator=(const singleDayData&);
+   void displayDay();
 private:
    string day[11];
    
