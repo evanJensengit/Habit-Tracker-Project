@@ -10,43 +10,51 @@
 //pass the file to the singleDayData constructor
 
 #include "singleDayData.h"
-
-singleDayData::singleDayData() {
-   for (int i = 0; i < daySize; i++) {
+ostream& operator<<(ostream& output , const singleDayData& dt ) {
+   for (int i = 0; i < dt.daySize; i++) {
+      if (!dt.day[i].empty()) {
+         output << dt.day[i] << endl;
+      }
    }
+   return output;
 }
 
+//----------------------------------------------------------------------------
+singleDayData::singleDayData() {}
+
+//----------------------------------------------------------------------------
 singleDayData::singleDayData(ifstream& file) {
    string line;
    
    if (file.is_open())
    {
-      
       //getline(file, line); to get the week
       int count = 0;
-      while ( line != "---------")
-      {
+      while (count < 100) {
          getline(file, line);
-         cout << line << endl;
-//         for (int i = 0; i < 11; i++) {
-//            day[i] = line;
-//         }
-         day[count] = line;
-         count++;
          
-         
+         if (line == "---------") {
+            break;
+         }
+      
+         if (!line.empty()) {
+            day[count] = line;
+            count++;
+         }
       }
      
    }
    else cout << "Unable to open file";
 }
 
+//----------------------------------------------------------------------------
 //to be cont create day
 singleDayData singleDayData::createDay(ifstream& file) {
    singleDayData day;
    return day;
 }
 
+//----------------------------------------------------------------------------
 //operator= overload
 singleDayData& singleDayData::operator=(const singleDayData& toCopy) {
    if (&toCopy != this) {
@@ -56,6 +64,7 @@ singleDayData& singleDayData::operator=(const singleDayData& toCopy) {
    }
    return *this;
 }
+//----------------------------------------------------------------------------
 //display day
 //displays the day 
 void singleDayData::displayDay() {

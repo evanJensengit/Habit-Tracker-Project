@@ -41,6 +41,7 @@ using namespace std;
 #define singleDayData_h
 
 class singleDayData {
+   friend ostream& operator<<(ostream&, const singleDayData& );
 public:
    singleDayData();
    singleDayData(ifstream&);
@@ -48,8 +49,8 @@ public:
    singleDayData& operator=(const singleDayData&);
    void displayDay();
 private:
-   string day[11];
-   int daySize = 11; 
+   string day[12];
+   int daySize = 12; 
 };
 
 

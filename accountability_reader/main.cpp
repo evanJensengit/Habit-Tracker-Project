@@ -19,23 +19,12 @@
 using namespace std;
 
 int main() {
-   
-   
-   ofstream myOfile;
-   myOfile.open ("accountability.txt", std::ios_base::app);
-   myOfile.close();
   
    string line;
    ifstream myfile ("accountabilityInput.txt");
    weeklydata theWeek;
+   
    theWeek.startProgram(myfile);
-   
-   //weeklydata theWeek(myfile);
-   
 
-   
-
-
-   
-   return 0;
+   myfile.close();
 }

@@ -19,7 +19,9 @@
 using namespace std;
 
 class weeklydata {
+   friend ostream& operator<<(ostream&, const weeklydata& );
 public:
+   
    weeklydata();
    weeklydata(ifstream&);
    weeklydata sortFile(ifstream&);
@@ -28,9 +30,9 @@ public:
 
 private:
    singleDayData week[7];
-   int weekSize;
+   int weekSize = 7;
    string weekDate;
    void displayWeek();
-
+   void logData(const weeklydata&);
 };
 #endif /* sorted_hpp */
