@@ -27,25 +27,14 @@ int main() {
   
    string line;
    ifstream myfile ("accountabilityInput.txt");
-   singleDayData day(myfile);
+   weeklydata theWeek;
+   theWeek.startProgram(myfile);
    
-   singleDayData day1;
-   day1.displayDay();
+   //weeklydata theWeek(myfile);
    
+
    
-   
-   
-   
-   if (myfile.is_open())
-   {
-      while ( getline (myfile, line) )
-      {
-         cout << line << '\n';
-      }
-      myfile.close();
-   }
-   
-   else cout << "Unable to open file";
+
 
    
    return 0;

@@ -12,12 +12,13 @@
 #include "singleDayData.h"
 
 singleDayData::singleDayData() {
-   for (int i = 0; i < 11; i++) {
+   for (int i = 0; i < daySize; i++) {
    }
 }
 
 singleDayData::singleDayData(ifstream& file) {
    string line;
+   
    if (file.is_open())
    {
       
@@ -34,31 +35,31 @@ singleDayData::singleDayData(ifstream& file) {
          count++;
          
          
-        
-         
       }
      
    }
-   
    else cout << "Unable to open file";
 }
 
+//to be cont create day
 singleDayData singleDayData::createDay(ifstream& file) {
    singleDayData day;
    return day;
 }
 
+//operator= overload
 singleDayData& singleDayData::operator=(const singleDayData& toCopy) {
    if (&toCopy != this) {
-      for (int i = 0; i < 11; i++) {
+      for (int i = 0; i < daySize; i++) {
          day[i] = toCopy.day[i];
       }
    }
    return *this;
 }
-
+//display day
+//displays the day 
 void singleDayData::displayDay() {
-   for (int i = 0; i < 11; i++) {
+   for (int i = 0; i < daySize; i++) {
       cout << day[i] << endl;
    }
 }

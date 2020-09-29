@@ -8,25 +8,29 @@
 
 //how can we have the data output as a table?
 
-#ifndef sorted_hpp
-#define sorted_hpp
+
+#ifndef weeklydata_h
+#define weeklydata_h
 #include <fstream>
 #include <stdio.h>
+#include <string>
 #include "singleDayData.h"
-
+#include <string>
 using namespace std;
+
 class weeklydata {
 public:
    weeklydata();
    weeklydata(ifstream&);
-   weeklydata sortFile(ifstream&);  //takes in file to be read
-                              //sorted function creates
-                              //a sorted class object that
-                              //will display the week
+   weeklydata sortFile(ifstream&);
+   void startProgram(ifstream&);
+   
+
 private:
-  singleDayData week[7];
-   
-   
+   singleDayData week[7];
+   int weekSize;
+   string weekDate;
+   void displayWeek();
 
 };
 #endif /* sorted_hpp */

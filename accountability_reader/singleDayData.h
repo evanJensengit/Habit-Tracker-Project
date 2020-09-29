@@ -49,8 +49,8 @@ public:
    void displayDay();
 private:
    string day[11];
-   
+   int daySize = 11; 
 };
-#include <stdio.h>
+
 
 #endif /* singleDayData_h */
