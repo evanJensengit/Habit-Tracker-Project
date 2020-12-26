@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include <string>
 #include "singleDayData.h"
-#include <string>
 using namespace std;
 
 class weeklydata {

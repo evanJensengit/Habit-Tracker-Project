@@ -32,14 +32,16 @@
 //"insufficient data inputted" 
 
 
-#include <string>
-#include <iostream>
-#include <fstream>
-using namespace std;
+
 
 #ifndef singleDayData_h
 #define singleDayData_h
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <vector> 
 
+using namespace std;
 class singleDayData {
    friend ostream& operator<<(ostream&, const singleDayData& );
 public:
@@ -48,6 +50,7 @@ public:
    singleDayData createDay(ifstream&);
    singleDayData& operator=(const singleDayData&);
    void displayDay();
+   string* getDay();
 private:
    string day[12];
    int daySize = 12; 

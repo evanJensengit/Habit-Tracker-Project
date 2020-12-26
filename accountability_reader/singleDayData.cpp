@@ -73,5 +73,9 @@ void singleDayData::displayDay() {
    }
 }
 
+string* singleDayData::getDay() {
+   return this->day;
+}
+
 
 

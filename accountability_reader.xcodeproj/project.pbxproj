@@ -10,6 +10,9 @@
 		CE562E272509F58700C50C25 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE562E262509F58700C50C25 /* main.cpp */; };
 		CE562E2F2509F85E00C50C25 /* weeklydata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE562E2D2509F85E00C50C25 /* weeklydata.cpp */; };
 		CE562E322509FA6400C50C25 /* singleDayData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE562E302509FA6400C50C25 /* singleDayData.cpp */; };
+		CEC1EA182597363C009CFB22 /* trackfactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEC1EA162597363C009CFB22 /* trackfactory.cpp */; };
+		CEDE9F86259442C6007DE8A6 /* date.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDE9F84259442C6007DE8A6 /* date.cpp */; };
+		CEDE9F8A25944577007DE8A6 /* Track.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDE9F8825944577007DE8A6 /* Track.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +34,12 @@
 		CE562E2E2509F85E00C50C25 /* weeklydata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = weeklydata.h; sourceTree = "<group>"; };
 		CE562E302509FA6400C50C25 /* singleDayData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = singleDayData.cpp; sourceTree = "<group>"; };
 		CE562E312509FA6400C50C25 /* singleDayData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singleDayData.h; sourceTree = "<group>"; };
+		CEC1EA162597363C009CFB22 /* trackfactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = trackfactory.cpp; sourceTree = "<group>"; };
+		CEC1EA172597363C009CFB22 /* trackfactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = trackfactory.h; sourceTree = "<group>"; };
+		CEDE9F84259442C6007DE8A6 /* date.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = date.cpp; sourceTree = "<group>"; };
+		CEDE9F85259442C6007DE8A6 /* date.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = date.h; sourceTree = "<group>"; };
+		CEDE9F8825944577007DE8A6 /* Track.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Track.cpp; sourceTree = "<group>"; };
+		CEDE9F8925944577007DE8A6 /* Track.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +77,12 @@
 				CE562E312509FA6400C50C25 /* singleDayData.h */,
 				CE562E2D2509F85E00C50C25 /* weeklydata.cpp */,
 				CE562E2E2509F85E00C50C25 /* weeklydata.h */,
+				CEDE9F84259442C6007DE8A6 /* date.cpp */,
+				CEDE9F85259442C6007DE8A6 /* date.h */,
+				CEDE9F8825944577007DE8A6 /* Track.cpp */,
+				CEDE9F8925944577007DE8A6 /* Track.h */,
+				CEC1EA162597363C009CFB22 /* trackfactory.cpp */,
+				CEC1EA172597363C009CFB22 /* trackfactory.h */,
 			);
 			path = accountability_reader;
 			sourceTree = "<group>";
@@ -98,7 +113,7 @@
 		CE562E1B2509F58700C50C25 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Evan Jensen";
 				TargetAttributes = {
 					CE562E222509F58700C50C25 = {
@@ -129,9 +144,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC1EA182597363C009CFB22 /* trackfactory.cpp in Sources */,
 				CE562E2F2509F85E00C50C25 /* weeklydata.cpp in Sources */,
 				CE562E322509FA6400C50C25 /* singleDayData.cpp in Sources */,
+				CEDE9F8A25944577007DE8A6 /* Track.cpp in Sources */,
 				CE562E272509F58700C50C25 /* main.cpp in Sources */,
+				CEDE9F86259442C6007DE8A6 /* date.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +182,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -222,6 +241,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -250,6 +270,7 @@
 		CE562E2B2509F58700C50C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -258,6 +279,7 @@
 		CE562E2C2509F58700C50C25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -5,7 +5,10 @@
 //  Created by Evan Jensen on 9/9/20.
 //  Copyright © 2020 Evan Jensen. All rights reserved.
 //
-//overload the cout for the week and the day
+//overload the cout for the week and the day did it!!
+//get the last entry first and the first entry last
+//why do "new" why is that helpful? is it just to prevent stack overflow?
+
 #include "weeklydata.h"
 
 ostream& operator<<(ostream& output, const weeklydata& dt) {
@@ -40,6 +43,15 @@ weeklydata::weeklydata(ifstream& file) {
 void weeklydata::startProgram(ifstream& file) {
    weeklydata week(file);
    cout << week << endl;
+   //put this into a method--
+   string delimeter = ":";
+   for (int i = 0; i < weekSize; i++) {
+      string* firstDay = week.week[i].getDay();
+      //cout << firstDay << endl;
+      cout << firstDay[0] << endl;
+      
+   }
+   //----
 }
 
 //----------------------------------------------------------------------------
