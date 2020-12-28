@@ -12,10 +12,12 @@
 //allocates Display, Checkout, PatronHistory and Return objects to specific
 //indices of actions data member
 TrackFactory::TrackFactory() {
+   
    for (int i = 0; i < MAXSIZE; i++) {
-      tracks [i] = nullptr;
+      tracks[i] = nullptr;
    }
-   actions [hash('D')] = new Date();
+   
+   tracks [hash("Date")] = new Date();
 //   actions[hash('C')] = new Checkout();
 //   actions[hash('H')] = new PatronHistory();
 //   actions[hash('R')] = new Return();
@@ -36,38 +38,48 @@ for (int i = 0; i < MAXSIZE; i++) {
 //----------------------------------------------------------------------------
 //createAction method
 //creates action and maps action to actions hash table data member
-Track* TrackFactory::createTrack(char c) const {
+Track* TrackFactory::createTrack(string c) const {
    int subscript = hash(c);
-   if (subscript > MAXSIZE ) {
+   
+   if (tracks[subscript] == nullptr) {
       return nullptr;
    }
-   else if (subscript < 0) { //hash did not work
-      return nullptr;
-   }
-   else if (tracks[subscript] == nullptr) {
-      return nullptr;
-   }
+   
    return tracks[subscript]->create();
 }
 
 //----------------------------------------------------------------------------
-//hash method
-int TrackFactory::hash(char c) const {
-   toupper(c);
-   int posIndex = c % MAXSIZE;
-   if (tracks[posIndex] == nullptr ) {
-      return posIndex;
+//hash method (dont take in the : with the passed string
+//string wrkt is passed
+//hash that and store it
+//then weekday is passed
+int TrackFactory::hash(string c) const {
+   char charArray[c.size() + 1];
+   strcpy(charArray, c.c_str());
+   int sum = 0;
+   for (int i = 0; i < c.size() + 1; i++) {
+     sum += int(charArray[i]);
    }
-   int collision, collisionSum ;
-   
-   for (int i = 1; i < MAXSIZE; i++) {
-      collision = i * i;
-      collisionSum = (collision + posIndex) % MAXSIZE;
-      if (tracks[collisionSum] == nullptr ) {
-         return collisionSum;
+   sum = sum % MAXSIZE;
+   //either the track does not exist or tracks is being created in constructor
+   //of TrackFactory
+   if (tracks[sum] == nullptr) {
+      return sum;
+   }
+   //do this in case of collsion
+   cout << tracks[sum]->getDataDescription() << endl;
+   if (c != tracks[sum]->getDataDescription()) {
+      for (int i = 0; i < MAXSIZE;  i++) {
+         sum += (i*i);
+         sum = sum % MAXSIZE;
+         if (tracks[sum] == nullptr) {
+            return sum;
+         }
+         else if (tracks[sum]->getDataDescription() == c) {
+            return sum;
+         }
       }
    }
    
-   
-   return -1;
+      return sum;
 }

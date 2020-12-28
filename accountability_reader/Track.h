@@ -10,7 +10,6 @@
 #define Track_h
 
 #include <string>
-#include <iostream>
 #include <fstream>
 #include <iostream>
 #include <iomanip>
@@ -19,6 +18,7 @@ using namespace std;
 class Track {
    friend ostream& operator<< (ostream&, const Track&);
 public:
+   static const int MAXSIZE = 47;
    Track();
    virtual ~Track();
    
@@ -37,8 +37,9 @@ public:
    //virtual function to be implemented by children class to create actions
    virtual Track* create() = 0;
    
+  virtual string getDataDescription() = 0;
 protected:
-   int hash(char) const;
+   int hash(string) const;
    string dataDescription;
 };
 #endif /* Track_hpp */

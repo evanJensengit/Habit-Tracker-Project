@@ -27,8 +27,15 @@ Track::~Track() {
 //----------------------------------------------------------------------------
 //hash method
 //returns int
-int Track::hash( char c) const {
-   return c - 'A';
+int Track::hash(string c) const {
+   char charArray[c.size()+1];
+   strcpy(charArray, c.c_str());
+   int sum = 0;
+   for (int i = 0; i < c.size() + 1; i++) {
+      sum += int(charArray[i]);
+   }
+   sum = sum % MAXSIZE;
+   return sum;
 }
 
 

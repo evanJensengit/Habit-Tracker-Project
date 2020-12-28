@@ -39,21 +39,23 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include <vector> 
+#include "trackfactory.h"
 
 using namespace std;
+static const int NUMBER_OF_TRACKS = 15;
+
 class singleDayData {
    friend ostream& operator<<(ostream&, const singleDayData& );
 public:
    singleDayData();
    singleDayData(ifstream&);
    singleDayData createDay(ifstream&);
-   singleDayData& operator=(const singleDayData&);
+   //singleDayData& operator=(const singleDayData&);
    void displayDay();
    string* getDay();
 private:
-   string day[12];
-   int daySize = 12; 
+   Track* tracks[NUMBER_OF_TRACKS];
+   TrackFactory trackFactory;
 };
 
 

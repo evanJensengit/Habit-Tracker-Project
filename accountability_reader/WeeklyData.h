@@ -14,24 +14,24 @@
 #include <fstream>
 #include <stdio.h>
 #include <string>
+#include <iostream>
 #include "singleDayData.h"
 using namespace std;
 
-class weeklydata {
-   friend ostream& operator<<(ostream&, const weeklydata& );
+class WeeklyData {
+   friend ostream& operator<<(ostream&, const WeeklyData& );
 public:
-   
-   weeklydata();
-   weeklydata(ifstream&);
-   weeklydata sortFile(ifstream&);
+   static const int WEEK_LENGTH = 7;
+   WeeklyData();
+   WeeklyData(ifstream&);
+   WeeklyData sortFile(ifstream&);
    void startProgram(ifstream&);
    
 
 private:
-   singleDayData week[7];
-   int weekSize = 7;
+   singleDayData week[WEEK_LENGTH];
    string weekDate;
    void displayWeek();
-   void logData(const weeklydata&);
+   void logData(const WeeklyData&);
 };
 #endif /* sorted_hpp */

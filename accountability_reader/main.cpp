@@ -13,7 +13,7 @@
 
 
 
-#include "weeklydata.h"
+#include "WeeklyData.h"
 #include "singleDayData.h"
 
 using namespace std;
@@ -21,8 +21,8 @@ using namespace std;
 int main() {
   
    string line;
-   ifstream myfile ("accountabilityInput.txt");
-   weeklydata theWeek;
+   ifstream myfile ("justDate.txt");
+   WeeklyData theWeek;
    
    theWeek.startProgram(myfile);
 

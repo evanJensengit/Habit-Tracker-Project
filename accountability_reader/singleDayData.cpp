@@ -11,10 +11,8 @@
 
 #include "singleDayData.h"
 ostream& operator<<(ostream& output , const singleDayData& dt ) {
-   for (int i = 0; i < dt.daySize; i++) {
-      if (!dt.day[i].empty()) {
-         output << dt.day[i] << endl;
-      }
+   for (int i = 0; i < NUMBER_OF_TRACKS; i++) {
+      output << dt.tracks[i] << endl;
    }
    return output;
 }
@@ -23,25 +21,29 @@ ostream& operator<<(ostream& output , const singleDayData& dt ) {
 singleDayData::singleDayData() {}
 
 //----------------------------------------------------------------------------
-singleDayData::singleDayData(ifstream& file) {
-   string line;
-   
-   if (file.is_open())
+singleDayData::singleDayData(ifstream& infile) {
+   string trackType;
+   string badInput;
+   bool success;
+   if (infile.is_open())
    {
-      //getline(file, line); to get the week
-      int count = 0;
-      while (count < 100) {
-         getline(file, line);
-         
-         if (line == "---------") {
-            break;
-         }
-      
-         if (!line.empty()) {
-            day[count] = line;
-            count++;
-         }
-      }
+     for (int i = 0; i < NUMBER_OF_TRACKS; i++) {
+        getline(infile, trackType, ':');
+        if (infile.eof()) break;
+        Track* ptr = trackFactory.createTrack(trackType);
+        if (ptr == nullptr) {
+           getline(infile, badInput);
+        }
+        else {
+           success = ptr->setData(infile);
+           if (!success) {
+              getline(infile, badInput);
+           }
+           else if(success) {
+              tracks[i] = ptr;
+           }
+        }
+     }
      
    }
    else cout << "Unable to open file";
@@ -56,25 +58,21 @@ singleDayData singleDayData::createDay(ifstream& file) {
 
 //----------------------------------------------------------------------------
 //operator= overload
-singleDayData& singleDayData::operator=(const singleDayData& toCopy) {
-   if (&toCopy != this) {
-      for (int i = 0; i < daySize; i++) {
-         day[i] = toCopy.day[i];
-      }
-   }
-   return *this;
-}
+//singleDayData& singleDayData::operator=(const singleDayData& toCopy) {
+//   if (&toCopy != this) {
+//      for (int i = 0; i < NUMBER_OF_TRACKS; i++) {
+//         tracks[i] = toCopy.day[i];
+//      }
+//   }
+//   return *this;
+//}
 //----------------------------------------------------------------------------
 //display day
 //displays the day 
 void singleDayData::displayDay() {
-   for (int i = 0; i < daySize; i++) {
-      cout << day[i] << endl;
+   for (int i = 0; i < NUMBER_OF_TRACKS; i++) {
+      cout << tracks[i] << endl;
    }
-}
-
-string* singleDayData::getDay() {
-   return this->day;
 }
 
 

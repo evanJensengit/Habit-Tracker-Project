@@ -9,61 +9,50 @@
 //get the last entry first and the first entry last
 //why do "new" why is that helpful? is it just to prevent stack overflow?
 
-#include "weeklydata.h"
+#include "WeeklyData.h"
 
-ostream& operator<<(ostream& output, const weeklydata& dt) {
-   for (int i = 0; i < dt.weekSize; i++) {
+ostream& operator<<(ostream& output, const WeeklyData& dt) {
+   for (int i = 0; i < dt.WEEK_LENGTH; i++) {
       output << dt.week[i] << endl;
    }
    return output;
 }
 
 //----------------------------------------------------------------------------
-weeklydata::weeklydata() {}
+WeeklyData::WeeklyData() {}
 
 //----------------------------------------------------------------------------
-weeklydata::weeklydata(ifstream& file) {
+WeeklyData::WeeklyData(ifstream& file) {
    string line;
    if (file.is_open())
    {
-   getline(file, line);
-   
-   weekDate = line;
-   
-   for (int i = 0; i < weekSize; i++) {
+   for (int i = 0; i < WEEK_LENGTH; i++) {
       singleDayData day(file);
       week[i] = day;
-      //singleDayData day1 = new singleDayData(ifstream); is this necessary?
-      }
+      if (file.eof()) break;
+   }
    }
    else cout << "Unable to open file";
 }
 
 //----------------------------------------------------------------------------
-void weeklydata::startProgram(ifstream& file) {
-   weeklydata week(file);
+void WeeklyData::startProgram(ifstream& file) {
+   WeeklyData week(file);
    cout << week << endl;
-   //put this into a method--
-   string delimeter = ":";
-   for (int i = 0; i < weekSize; i++) {
-      string* firstDay = week.week[i].getDay();
-      //cout << firstDay << endl;
-      cout << firstDay[0] << endl;
-      
-   }
-   //----
+   
+   //logData
 }
 
 //----------------------------------------------------------------------------
-void weeklydata::displayWeek() {
-   for (int i = 0; i < weekSize; i++) {
+void WeeklyData::displayWeek() {
+   for (int i = 0; i < WEEK_LENGTH; i++) {
       week[i].displayDay();
    }
 }
 
 //----------------------------------------------------------------------------
 //log the week data
-void weeklydata::logData(const weeklydata& currentWeek) {
+void WeeklyData::logData(const WeeklyData& currentWeek) {
    ofstream myOfile;
    myOfile.open ("accountability.txt", std::ios_base::app);
    myOfile.close();

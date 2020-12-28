@@ -19,8 +19,22 @@ class Date : public Track {
 public:
    Date(); //constructor
    ~Date();
-   virtual bool setData(istream&); //sets data for Date object
-   virtual ostream& print(ostream&);
+  
+   //set class data from data file
+   //returns true if the data is set, false when bad data, i.e., is eof
+   virtual bool setData(istream&);
+   
+   //helper for operator<< overload
+   //concatenates data members year, month and day to ostream& object
+   virtual ostream& print(ostream&) const;
+   
+   //prints generic data member names
+   virtual void printDataMemberNames() const;
+   
+   //virtual function to be implemented by children class to create actions
+   virtual Track* create();
+   
+   virtual string getDataDescription();
    
 protected:
    int day;

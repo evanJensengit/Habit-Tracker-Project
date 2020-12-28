@@ -5,7 +5,7 @@
 //  Created by Evan Jensen on 12/26/20.
 //  Copyright © 2020 Evan Jensen. All rights reserved.
 //
-
+//gotta have an array of linked list or array of BST Tree
 #ifndef trackfactory_h
 #define trackfactory_h
 
@@ -13,6 +13,7 @@
 #include <cstring>
 #include "date.h"
 #include "Track.h"
+#include <vector>
 using namespace std;
 
 
@@ -23,10 +24,10 @@ public:
    ~TrackFactory(); //destructor deallocates actions data member
    
    //creates action and maps action to actions hash table data member
-   Track* createTrack(char) const;
+   Track* createTrack(string) const;
 protected:
-   Track* tracks[MAXSIZE]; // stores available actions
-   int hash(char) const;
+   Track* tracks[MAXSIZE]; // stores available
+   int hash(string) const;
 };
 
 #endif /* trackfactory_hpp */
