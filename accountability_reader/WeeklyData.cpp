@@ -13,7 +13,7 @@
 
 ostream& operator<<(ostream& output, const WeeklyData& dt) {
    for (int i = 0; i < dt.WEEK_LENGTH; i++) {
-      output << dt.week[i] << endl;
+      output << *dt.week[i] << endl;
    }
    return output;
 }
@@ -21,24 +21,35 @@ ostream& operator<<(ostream& output, const WeeklyData& dt) {
 //----------------------------------------------------------------------------
 WeeklyData::WeeklyData() {}
 
+WeeklyData::~WeeklyData() {
+   for (int i = 0; i < WEEK_LENGTH; i++) {
+      delete week[i];
+      week[i] = nullptr;
+   }
+}
+
 //----------------------------------------------------------------------------
-WeeklyData::WeeklyData(ifstream& file) {
+WeeklyData::WeeklyData(ifstream& file) { }
+
+void WeeklyData::setData(ifstream& file) {
    string line;
    if (file.is_open())
    {
-   for (int i = 0; i < WEEK_LENGTH; i++) {
-      singleDayData day(file);
-      week[i] = day;
-      if (file.eof()) break;
-   }
+      for (int i = 0; i < WEEK_LENGTH; i++) {
+         singleDayData* day = new singleDayData(file);
+         //cout << *day;
+         week[i] = day;
+         if (file.eof()) break;
+      }
    }
    else cout << "Unable to open file";
 }
 
+
 //----------------------------------------------------------------------------
 void WeeklyData::startProgram(ifstream& file) {
-   WeeklyData week(file);
-   cout << week << endl;
+   setData(file);
+   cout << *this;
    
    //logData
 }
@@ -46,7 +57,7 @@ void WeeklyData::startProgram(ifstream& file) {
 //----------------------------------------------------------------------------
 void WeeklyData::displayWeek() {
    for (int i = 0; i < WEEK_LENGTH; i++) {
-      week[i].displayDay();
+      week[i]->displayDay();
    }
 }
 

@@ -12,7 +12,7 @@
 #include "singleDayData.h"
 ostream& operator<<(ostream& output , const singleDayData& dt ) {
    for (int i = 0; i < NUMBER_OF_TRACKS; i++) {
-      output << dt.tracks[i] << endl;
+      output << *dt.tracks[i] << endl;
    }
    return output;
 }
@@ -20,6 +20,12 @@ ostream& operator<<(ostream& output , const singleDayData& dt ) {
 //----------------------------------------------------------------------------
 singleDayData::singleDayData() {}
 
+singleDayData::~singleDayData() {
+   for (int i = 0; i < NUMBER_OF_TRACKS; i++) {
+      delete tracks[i];
+      tracks[i] = nullptr;
+   }
+}
 //----------------------------------------------------------------------------
 singleDayData::singleDayData(ifstream& infile) {
    string trackType;
@@ -30,6 +36,7 @@ singleDayData::singleDayData(ifstream& infile) {
      for (int i = 0; i < NUMBER_OF_TRACKS; i++) {
         getline(infile, trackType, ':');
         if (infile.eof()) break;
+        
         Track* ptr = trackFactory.createTrack(trackType);
         if (ptr == nullptr) {
            getline(infile, badInput);

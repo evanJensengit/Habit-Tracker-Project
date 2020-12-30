@@ -47,13 +47,15 @@ bool Date::setData(istream &infile) {
       day = 0;
       return false;
    }
+   getline(infile, theMonth);
+   cout << theMonth;
    return true;
 }
 
 //----------------------------------------------------------------------------
 //print method
 ostream& Date::print(ostream& output) const {
-   output << month << "/" << day;
+   output << dataDescription << ": " << month << "/" << day;
    return output;
 }
 //----------------------------------------------------------------------------

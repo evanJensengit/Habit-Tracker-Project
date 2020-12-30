@@ -10,7 +10,6 @@
 #define trackfactory_h
 
 #include <iostream>
-#include <cstring>
 #include "date.h"
 #include "Track.h"
 #include <vector>

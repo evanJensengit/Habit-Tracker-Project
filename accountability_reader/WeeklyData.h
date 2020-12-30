@@ -23,13 +23,15 @@ class WeeklyData {
 public:
    static const int WEEK_LENGTH = 7;
    WeeklyData();
+   ~WeeklyData();
    WeeklyData(ifstream&);
+   void setData(ifstream&);
    WeeklyData sortFile(ifstream&);
    void startProgram(ifstream&);
    
 
 private:
-   singleDayData week[WEEK_LENGTH];
+   singleDayData* week[WEEK_LENGTH];
    string weekDate;
    void displayWeek();
    void logData(const WeeklyData&);

@@ -67,7 +67,7 @@ int TrackFactory::hash(string c) const {
       return sum;
    }
    //do this in case of collsion
-   cout << tracks[sum]->getDataDescription() << endl;
+ //  cout << tracks[sum]->getDataDescription() << endl;
    if (c != tracks[sum]->getDataDescription()) {
       for (int i = 0; i < MAXSIZE;  i++) {
          sum += (i*i);

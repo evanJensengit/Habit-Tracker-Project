@@ -73,10 +73,10 @@
 			isa = PBXGroup;
 			children = (
 				CE562E262509F58700C50C25 /* main.cpp */,
-				CE562E302509FA6400C50C25 /* singleDayData.cpp */,
-				CE562E312509FA6400C50C25 /* singleDayData.h */,
 				CE562E2D2509F85E00C50C25 /* WeeklyData.cpp */,
 				CE562E2E2509F85E00C50C25 /* WeeklyData.h */,
+				CE562E302509FA6400C50C25 /* singleDayData.cpp */,
+				CE562E312509FA6400C50C25 /* singleDayData.h */,
 				CEDE9F84259442C6007DE8A6 /* date.cpp */,
 				CEDE9F85259442C6007DE8A6 /* date.h */,
 				CEDE9F8825944577007DE8A6 /* Track.cpp */,
