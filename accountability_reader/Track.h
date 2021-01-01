@@ -9,6 +9,7 @@
 #ifndef Track_h
 #define Track_h
 
+#include <vector>
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -19,28 +20,29 @@ using namespace std;
 class Track {
    friend ostream& operator<< (ostream&, const Track&);
 public:
-   static const int MAXSIZE = 47;
+   
    Track();
    virtual ~Track();
    
    //set class data from data file
    //returns true if the data is set, false when bad data, i.e., is eof
-   virtual bool setData(istream&) = 0;
+   virtual bool setData(istream&);
   
    //print for the data members of child class with spacing for
    //organized output
-   virtual ostream& print(ostream&) const = 0;
+   virtual ostream& print(ostream&) const;
    
    //printDataMemberNames prints the framework of data that the
    //child class holds like
-   virtual void printDataMemberNames() const = 0;
+   virtual void printDataMemberNames() const;
    
    //virtual function to be implemented by children class to create actions
-   virtual Track* create() = 0;
+   virtual Track* create();
    
-  virtual string getDataDescription() = 0;
+  virtual string getDataDescription();
+   
 protected:
-   int hash(string) const;
    string dataDescription;
+   vector<const Track*> trackHolder;
 };
 #endif /* Track_hpp */

@@ -21,10 +21,13 @@ using namespace std;
 int main() {
   
    string line;
-   ifstream myfile ("justDate.txt");
-   WeeklyData theWeek;
-   
-   theWeek.startProgram(myfile);
+   ifstream(myfile1)("primer.txt");
 
-   myfile.close();
+   WeeklyData theWeek;
+   theWeek.setPrimerData(myfile1);
+   ifstream myfile2 ("justDate.txt");
+   theWeek.startProgram(myfile2);
+
+   myfile1.close();
+   myfile2.close();
 }

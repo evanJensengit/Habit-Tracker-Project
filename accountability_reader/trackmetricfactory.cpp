@@ -6,31 +6,29 @@
 //  Copyright © 2020 Evan Jensen. All rights reserved.
 //
 
-#include "trackfactory.h"
+#include "trackmetricfactory.h"
 //----------------------------------------------------------------------------
 //constructor
 //allocates Display, Checkout, PatronHistory and Return objects to specific
 //indices of actions data member
-TrackFactory::TrackFactory() {
+TrackMetricFactory::TrackMetricFactory() {
    
    for (int i = 0; i < MAXSIZE; i++) {
-      tracks[i] = nullptr;
+      trackMetrics[i] = nullptr;
    }
    
-   tracks [hash("Date")] = new Date();
-//   actions[hash('C')] = new Checkout();
-//   actions[hash('H')] = new PatronHistory();
-//   actions[hash('R')] = new Return();
+   trackMetrics [hash("Date")] = new Date();
+
 }
 
 //----------------------------------------------------------------------------
 //destructor
 //deletes memory allocates in actions data member
-TrackFactory::~TrackFactory() {
+TrackMetricFactory::~TrackMetricFactory() {
 for (int i = 0; i < MAXSIZE; i++) {
-   if ( tracks[i] != nullptr) {
-      delete tracks[i];
-      tracks[i] = nullptr;
+   if ( trackMetrics[i] != nullptr) {
+      delete trackMetrics[i];
+      trackMetrics[i] = nullptr;
    }
 }
 }
@@ -38,14 +36,14 @@ for (int i = 0; i < MAXSIZE; i++) {
 //----------------------------------------------------------------------------
 //createAction method
 //creates action and maps action to actions hash table data member
-Track* TrackFactory::createTrack(string c) const {
+TrackMetric* TrackMetricFactory::createTrack(string c) const {
    int subscript = hash(c);
    
-   if (tracks[subscript] == nullptr) {
+   if (trackMetrics[subscript] == nullptr) {
       return nullptr;
    }
    
-   return tracks[subscript]->create();
+   return trackMetrics[subscript]->create();
 }
 
 //----------------------------------------------------------------------------
@@ -53,7 +51,7 @@ Track* TrackFactory::createTrack(string c) const {
 //string wrkt is passed
 //hash that and store it
 //then weekday is passed
-int TrackFactory::hash(string c) const {
+int TrackMetricFactory::hash(string c) const {
    char charArray[c.size() + 1];
    strcpy(charArray, c.c_str());
    int sum = 0;
@@ -63,19 +61,19 @@ int TrackFactory::hash(string c) const {
    sum = sum % MAXSIZE;
    //either the track does not exist or tracks is being created in constructor
    //of TrackFactory
-   if (tracks[sum] == nullptr) {
+   if (trackMetrics[sum] == nullptr) {
       return sum;
    }
    //do this in case of collsion
  //  cout << tracks[sum]->getDataDescription() << endl;
-   if (c != tracks[sum]->getDataDescription()) {
+   if (c != trackMetrics[sum]->getDataDescription()) {
       for (int i = 0; i < MAXSIZE;  i++) {
          sum += (i*i);
          sum = sum % MAXSIZE;
-         if (tracks[sum] == nullptr) {
+         if (trackMetrics[sum] == nullptr) {
             return sum;
          }
-         else if (tracks[sum]->getDataDescription() == c) {
+         else if (trackMetrics[sum]->getDataDescription() == c) {
             return sum;
          }
       }

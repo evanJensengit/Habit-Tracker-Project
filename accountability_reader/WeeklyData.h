@@ -24,8 +24,8 @@ public:
    static const int WEEK_LENGTH = 7;
    WeeklyData();
    ~WeeklyData();
-   WeeklyData(ifstream&);
    void setData(ifstream&);
+   void setPrimerData(ifstream&);
    WeeklyData sortFile(ifstream&);
    void startProgram(ifstream&);
    

@@ -39,7 +39,8 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include "trackfactory.h"
+#include "trackmetricfactory.h"
+#include "Track.h"
 
 using namespace std;
 static const int NUMBER_OF_TRACKS = 1;
@@ -56,7 +57,7 @@ public:
    string* getDay();
 private:
    Track* tracks[NUMBER_OF_TRACKS];
-   TrackFactory trackFactory;
+   TrackMetricFactory trackFactory;
 };
 
 

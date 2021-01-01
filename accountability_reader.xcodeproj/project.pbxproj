@@ -10,9 +10,12 @@
 		CE562E272509F58700C50C25 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE562E262509F58700C50C25 /* main.cpp */; };
 		CE562E2F2509F85E00C50C25 /* WeeklyData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE562E2D2509F85E00C50C25 /* WeeklyData.cpp */; };
 		CE562E322509FA6400C50C25 /* singleDayData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE562E302509FA6400C50C25 /* singleDayData.cpp */; };
-		CEC1EA182597363C009CFB22 /* trackfactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEC1EA162597363C009CFB22 /* trackfactory.cpp */; };
+		CE754664259E79F600255248 /* trackMetric.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE754662259E79F600255248 /* trackMetric.cpp */; };
+		CEC1EA182597363C009CFB22 /* trackmetricfactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEC1EA162597363C009CFB22 /* trackmetricfactory.cpp */; };
 		CEDE9F86259442C6007DE8A6 /* date.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDE9F84259442C6007DE8A6 /* date.cpp */; };
 		CEDE9F8A25944577007DE8A6 /* Track.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDE9F8825944577007DE8A6 /* Track.cpp */; };
+		CEE366DB259D7C34004BDDAC /* sleep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEE366D9259D7C34004BDDAC /* sleep.cpp */; };
+		CEE366DF259D82E1004BDDAC /* weekday.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEE366DD259D82E1004BDDAC /* weekday.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,12 +37,18 @@
 		CE562E2E2509F85E00C50C25 /* WeeklyData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeeklyData.h; sourceTree = "<group>"; };
 		CE562E302509FA6400C50C25 /* singleDayData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = singleDayData.cpp; sourceTree = "<group>"; };
 		CE562E312509FA6400C50C25 /* singleDayData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singleDayData.h; sourceTree = "<group>"; };
-		CEC1EA162597363C009CFB22 /* trackfactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = trackfactory.cpp; sourceTree = "<group>"; };
-		CEC1EA172597363C009CFB22 /* trackfactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = trackfactory.h; sourceTree = "<group>"; };
+		CE754662259E79F600255248 /* trackMetric.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = trackMetric.cpp; sourceTree = "<group>"; };
+		CE754663259E79F600255248 /* trackMetric.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = trackMetric.h; sourceTree = "<group>"; };
+		CEC1EA162597363C009CFB22 /* trackmetricfactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = trackmetricfactory.cpp; sourceTree = "<group>"; };
+		CEC1EA172597363C009CFB22 /* trackmetricfactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = trackmetricfactory.h; sourceTree = "<group>"; };
 		CEDE9F84259442C6007DE8A6 /* date.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = date.cpp; sourceTree = "<group>"; };
 		CEDE9F85259442C6007DE8A6 /* date.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = date.h; sourceTree = "<group>"; };
 		CEDE9F8825944577007DE8A6 /* Track.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Track.cpp; sourceTree = "<group>"; };
 		CEDE9F8925944577007DE8A6 /* Track.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		CEE366D9259D7C34004BDDAC /* sleep.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sleep.cpp; sourceTree = "<group>"; };
+		CEE366DA259D7C34004BDDAC /* sleep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sleep.h; sourceTree = "<group>"; };
+		CEE366DD259D82E1004BDDAC /* weekday.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = weekday.cpp; sourceTree = "<group>"; };
+		CEE366DE259D82E1004BDDAC /* weekday.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = weekday.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,14 +84,20 @@
 				CE562E262509F58700C50C25 /* main.cpp */,
 				CE562E2D2509F85E00C50C25 /* WeeklyData.cpp */,
 				CE562E2E2509F85E00C50C25 /* WeeklyData.h */,
+				CE754662259E79F600255248 /* trackMetric.cpp */,
+				CE754663259E79F600255248 /* trackMetric.h */,
+				CEE366D9259D7C34004BDDAC /* sleep.cpp */,
+				CEE366DA259D7C34004BDDAC /* sleep.h */,
 				CE562E302509FA6400C50C25 /* singleDayData.cpp */,
 				CE562E312509FA6400C50C25 /* singleDayData.h */,
 				CEDE9F84259442C6007DE8A6 /* date.cpp */,
 				CEDE9F85259442C6007DE8A6 /* date.h */,
-				CEDE9F8825944577007DE8A6 /* Track.cpp */,
 				CEDE9F8925944577007DE8A6 /* Track.h */,
-				CEC1EA162597363C009CFB22 /* trackfactory.cpp */,
-				CEC1EA172597363C009CFB22 /* trackfactory.h */,
+				CEDE9F8825944577007DE8A6 /* Track.cpp */,
+				CEE366DD259D82E1004BDDAC /* weekday.cpp */,
+				CEE366DE259D82E1004BDDAC /* weekday.h */,
+				CEC1EA162597363C009CFB22 /* trackmetricfactory.cpp */,
+				CEC1EA172597363C009CFB22 /* trackmetricfactory.h */,
 			);
 			path = accountability_reader;
 			sourceTree = "<group>";
@@ -144,11 +159,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC1EA182597363C009CFB22 /* trackfactory.cpp in Sources */,
+				CEC1EA182597363C009CFB22 /* trackmetricfactory.cpp in Sources */,
 				CE562E2F2509F85E00C50C25 /* WeeklyData.cpp in Sources */,
 				CE562E322509FA6400C50C25 /* singleDayData.cpp in Sources */,
 				CEDE9F8A25944577007DE8A6 /* Track.cpp in Sources */,
+				CEE366DB259D7C34004BDDAC /* sleep.cpp in Sources */,
 				CE562E272509F58700C50C25 /* main.cpp in Sources */,
+				CE754664259E79F600255248 /* trackMetric.cpp in Sources */,
+				CEE366DF259D82E1004BDDAC /* weekday.cpp in Sources */,
 				CEDE9F86259442C6007DE8A6 /* date.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,7 +29,11 @@ WeeklyData::~WeeklyData() {
 }
 
 //----------------------------------------------------------------------------
-WeeklyData::WeeklyData(ifstream& file) { }
+
+void WeeklyData::setPrimerData(ifstream & infile) {
+   
+}
+
 
 void WeeklyData::setData(ifstream& file) {
    string line;

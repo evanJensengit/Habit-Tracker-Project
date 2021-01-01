@@ -6,26 +6,26 @@
 //  Copyright © 2020 Evan Jensen. All rights reserved.
 //
 //gotta have an array of linked list or array of BST Tree
-#ifndef trackfactory_h
-#define trackfactory_h
+#ifndef trackmetricfactory_h
+#define trackmetricfactory_h
 
 #include <iostream>
 #include "date.h"
-#include "Track.h"
+#include "TrackMetric.h"
 #include <vector>
 using namespace std;
 
 
-class TrackFactory {
+class TrackMetricFactory {
 public:
    static const int MAXSIZE = 47;
-   TrackFactory(); //constructor
-   ~TrackFactory(); //destructor deallocates actions data member
+   TrackMetricFactory(); //constructor
+   ~TrackMetricFactory(); //destructor deallocates actions data member
    
    //creates action and maps action to actions hash table data member
-   Track* createTrack(string) const;
+   TrackMetric* createTrack(string) const;
 protected:
-   Track* tracks[MAXSIZE]; // stores available
+   TrackMetric* trackMetrics[MAXSIZE]; // stores available
    int hash(string) const;
 };
 
