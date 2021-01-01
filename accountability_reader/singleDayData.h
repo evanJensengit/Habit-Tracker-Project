@@ -57,7 +57,7 @@ public:
    string* getDay();
 private:
    Track* tracks[NUMBER_OF_TRACKS];
-   TrackMetricFactory trackFactory;
+   
 };
 
 

@@ -11,7 +11,9 @@
 
 #include <iostream>
 #include "date.h"
-#include "TrackMetric.h"
+#include "sleep.h"
+#include "weekday.h"
+#include "trackMetric.h"
 #include <vector>
 using namespace std;
 
@@ -23,7 +25,7 @@ public:
    ~TrackMetricFactory(); //destructor deallocates actions data member
    
    //creates action and maps action to actions hash table data member
-   TrackMetric* createTrack(string) const;
+   TrackMetric* createTrackMetric(string) const;
 protected:
    TrackMetric* trackMetrics[MAXSIZE]; // stores available
    int hash(string) const;

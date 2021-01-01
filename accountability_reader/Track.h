@@ -15,6 +15,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cstring>
+#include "trackmetricfactory.h"
 using namespace std;
 
 class Track {
@@ -22,27 +23,34 @@ class Track {
 public:
    
    Track();
-   virtual ~Track();
+   Track(string);
+    ~Track();
    
    //set class data from data file
    //returns true if the data is set, false when bad data, i.e., is eof
-   virtual bool setData(istream&);
+   //sets
+   bool setPrimerData(istream&);
   
-   //print for the data members of child class with spacing for
-   //organized output
-   virtual ostream& print(ostream&) const;
+   
+   bool setRecordData(istream&);
+  
+   //print for the dataDescript followed by the trackMetricHolder
+   //with spacing for organized output, all concatenated to ostream& object
+   ostream& print(ostream&) const;
    
    //printDataMemberNames prints the framework of data that the
-   //child class holds like
-   virtual void printDataMemberNames() const;
+   //Track object holds in the trackMetricHolder
+   void printDataMemberNames() const;
    
-   //virtual function to be implemented by children class to create actions
-   virtual Track* create();
+   //returns dataDescription
+   string getDataDescription();
    
-  virtual string getDataDescription();
+   //gotta
    
-protected:
+   
+private:
+   TrackMetricFactory trackMetricFactory;
    string dataDescription;
-   vector<const Track*> trackHolder;
+   vector<const TrackMetric*> trackMetricHolder;
 };
 #endif /* Track_hpp */

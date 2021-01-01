@@ -26,7 +26,7 @@ int main() {
    WeeklyData theWeek;
    theWeek.setPrimerData(myfile1);
    ifstream myfile2 ("justDate.txt");
-   theWeek.startProgram(myfile2);
+   theWeek.setRecordData(myfile2);
 
    myfile1.close();
    myfile2.close();

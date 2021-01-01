@@ -19,23 +19,48 @@
 Track::Track() {
 }
 
+Track::Track(string descript) {
+   dataDescription = descript;
+}
+
 //----------------------------------------------------------------------------
 //destructor
 Track::~Track() {
 }
 
 //----------------------------------------------------------------------------
-//hash method
-//returns int
-int Track::hash(string c) const {
-   char charArray[c.size()+1];
-   strcpy(charArray, c.c_str());
-   int sum = 0;
-   for (int i = 0; i < c.size() + 1; i++) {
-      sum += int(charArray[i]);
+//reads in data using commas as breaks between TrackMetrics to be made
+//adds empty TrackMetric objects to TrackMetricHolder
+bool Track::setPrimerData(istream & infile) {
+   string trackMetricList;
+   getline(infile, trackMetricList);
+   string addCommatrackMetricList = trackMetricList + ",";
+   string trackMetricFromList;
+   string comma = ",";
+   
+   for (;;) {
+      size_t found = addCommatrackMetricList.find(comma);
+      if (found != string::npos) {
+         trackMetricFromList = addCommatrackMetricList.substr(0, found);
+         
+      }
    }
-   sum = sum % MAXSIZE;
-   return sum;
+   return true;
 }
+
+//----------------------------------------------------------------------------
+//based on the number of commas or the number of objects in the
+//trackMetricHolder, method takes in date from one line of file
+//and fills in the data members of the empty TrackMetric objects in the
+//trackMetricHolder
+bool Track::setRecordData(istream & infile) {
+   //gotta be able to get vector size when filling in the data for the
+   //trackMetricHolder's TrackMetric objects (see comments for trackMetric.h
+   //method " setData"
+   return true;
+}
+
+
+
 
 

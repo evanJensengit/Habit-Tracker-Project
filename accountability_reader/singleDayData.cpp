@@ -27,6 +27,9 @@ singleDayData::~singleDayData() {
    }
 }
 //----------------------------------------------------------------------------
+//constructor
+//this is where the data members of the TrackMetrics that make up the
+//Track objects get filled in by the ifstream
 singleDayData::singleDayData(ifstream& infile) {
    string trackType;
    string badInput;
@@ -37,22 +40,19 @@ singleDayData::singleDayData(ifstream& infile) {
         getline(infile, trackType, ':');
         if (infile.eof()) break;
         
-        Track* ptr = trackFactory.createTrack(trackType);
-        if (ptr == nullptr) {
-           getline(infile, badInput);
-        }
-        else {
-           success = ptr->setData(infile);
+        Track* ptr = new Track(trackType);
+       
+        success = ptr->setPrimerData(infile);
            if (!success) {
               getline(infile, badInput);
            }
+        
            else if(success) {
               tracks[i] = ptr;
            }
         }
      }
      
-   }
    else cout << "Unable to open file";
 }
 

@@ -29,6 +29,9 @@ public:
    
    //set class data from data file
    //returns true if the data is set, false when bad data, i.e., is eof
+   //based on the size of the vector of the int passed in, the
+   //PASS IN AN INT SO THAT THE CHILDREN OF TRACKMETRIC KNOW HOW MANY TIMES TO INTERATE THROUGH THE FILE LINE AND THEN BASED ON THE INT ITERATE ONE LESS THAN THAT AMOUNT AND THEN TAKE THE REST OF THE LINE WITHOUT THE DELIMETER OF ","
+   
    virtual bool setData(istream&) = 0;
    
    //print for the data members of child class with spacing for
@@ -43,6 +46,8 @@ public:
    virtual TrackMetric* create() = 0;
    
    virtual string getDataDescription() = 0;
+   
+   
    
 protected:
    int hash(string) const;

@@ -36,7 +36,7 @@ for (int i = 0; i < MAXSIZE; i++) {
 //----------------------------------------------------------------------------
 //createAction method
 //creates action and maps action to actions hash table data member
-TrackMetric* TrackMetricFactory::createTrack(string c) const {
+TrackMetric* TrackMetricFactory::createTrackMetric(string c) const {
    int subscript = hash(c);
    
    if (trackMetrics[subscript] == nullptr) {
