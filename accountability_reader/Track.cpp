@@ -37,14 +37,24 @@ bool Track::setPrimerData(istream & infile) {
    string addCommatrackMetricList = trackMetricList + ",";
    string trackMetricFromList;
    string comma = ",";
-   
+   string badInput;
+ 
    for (;;) {
       size_t found = addCommatrackMetricList.find(comma);
       if (found != string::npos) {
          trackMetricFromList = addCommatrackMetricList.substr(0, found);
-         
+         cout << trackMetricFromList;
+         TrackMetric* ptr = trackMetricFactory.createTrackMetric(trackMetricFromList);
+         if (ptr == nullptr) { //nullptr when bookType is not in UWBLibrary
+            getline(infile, badInput); //reads rest of invalid data
+         }
+         else {
+            trackMetricHolder.push_back(ptr);
+         }
       }
+      else break;
    }
+
    return true;
 }
 

@@ -20,7 +20,6 @@ using namespace std;
 
 int main() {
   
-   string line;
    ifstream(myfile1)("primer.txt");
 
    WeeklyData theWeek;

@@ -9,11 +9,11 @@
 #ifndef sleep_h
 #define sleep_h
 
-#include "Track.h"
+#include "trackMetric.h"
 
 using namespace std;
 
-class Sleep : public Track {
+class Sleep : public TrackMetric {
    friend ostream& operator<< (ostream&, const Sleep&);
    
 public:
@@ -32,7 +32,7 @@ public:
    virtual void printDataMemberNames() const;
    
    //virtual function to be implemented by children class to create actions
-   virtual Track* create();
+   virtual TrackMetric* create();
    
    virtual string getDataDescription();
    

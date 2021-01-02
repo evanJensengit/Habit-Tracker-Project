@@ -51,6 +51,7 @@ public:
    
 protected:
    int hash(string) const;
+   string dataDescription;
 };
 
 #endif /* trackMetric_hpp */

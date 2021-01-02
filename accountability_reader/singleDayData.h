@@ -39,7 +39,6 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include "trackmetricfactory.h"
 #include "Track.h"
 
 using namespace std;

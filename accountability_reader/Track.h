@@ -18,6 +18,7 @@
 #include "trackmetricfactory.h"
 using namespace std;
 
+static const int NUMBER_OF_TRACKS = 1;
 class Track {
    friend ostream& operator<< (ostream&, const Track&);
 public:
@@ -45,7 +46,6 @@ public:
    //returns dataDescription
    string getDataDescription();
    
-   //gotta
    
    
 private:

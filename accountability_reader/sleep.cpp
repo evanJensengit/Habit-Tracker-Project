@@ -53,7 +53,7 @@ void Sleep::printDataMemberNames() const {
 }
 //----------------------------------------------------------------------------
 
-Track* Sleep::create() {
+TrackMetric* Sleep::create() {
    return new Sleep;
 }
 //----------------------------------------------------------------------------
