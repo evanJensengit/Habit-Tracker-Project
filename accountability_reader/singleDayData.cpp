@@ -41,7 +41,8 @@ singleDayData::singleDayData(ifstream& infile) {
         if (infile.eof()) break;
         
         Track* ptr = new Track(trackType);
-       
+        //remove the space after the ':'
+        getline(infile, trackType, ' ');
         success = ptr->setPrimerData(infile);
            if (!success) {
               getline(infile, badInput);
@@ -57,22 +58,20 @@ singleDayData::singleDayData(ifstream& infile) {
 }
 
 //----------------------------------------------------------------------------
-//to be cont create day
-singleDayData singleDayData::createDay(ifstream& file) {
-   singleDayData day;
-   return day;
+singleDayData::singleDayData(singleDayData*& toCopy) {
+   *this = *toCopy;
 }
 
 //----------------------------------------------------------------------------
 //operator= overload
-//singleDayData& singleDayData::operator=(const singleDayData& toCopy) {
-//   if (&toCopy != this) {
-//      for (int i = 0; i < NUMBER_OF_TRACKS; i++) {
-//         tracks[i] = toCopy.day[i];
-//      }
-//   }
-//   return *this;
-//}
+singleDayData& singleDayData::operator=(const singleDayData& toCopy) {
+   if (&toCopy != this) {
+      for (int i = 0; i < NUMBER_OF_TRACKS; i++) {
+         tracks[i] = toCopy.tracks[i];
+      }
+   }
+   return *this;
+}
 //----------------------------------------------------------------------------
 //display day
 //displays the day 

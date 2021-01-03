@@ -42,21 +42,22 @@
 #include "Track.h"
 
 using namespace std;
-static const int NUMBER_OF_TRACKS = 1;
 
+static const int NUMBER_OF_TRACKS = 1;
 class singleDayData {
    friend ostream& operator<<(ostream&, const singleDayData& );
 public:
+ 
    singleDayData();
    ~singleDayData();
    singleDayData(ifstream&);
-   singleDayData createDay(ifstream&);
-   //singleDayData& operator=(const singleDayData&);
+   singleDayData(singleDayData*&);
+   singleDayData& operator=(const singleDayData&);
    void displayDay();
    string* getDay();
 private:
    Track* tracks[NUMBER_OF_TRACKS];
-   
+   singleDayData copy(const singleDayData&);
 };
 
 

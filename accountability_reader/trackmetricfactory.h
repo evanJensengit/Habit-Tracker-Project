@@ -12,6 +12,9 @@
 #include <iostream>
 #include "date.h"
 #include "sleep.h"
+#include "name.h"
+#include "YOrN.h"
+#include "amount.h"
 #include "trackMetric.h"
 #include <vector>
 using namespace std;

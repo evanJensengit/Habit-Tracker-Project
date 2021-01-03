@@ -10,7 +10,8 @@
 //somehow pull the time from online so that it updates weekly with
 //data of this last week.
 
-
+//for operator<< overload, could passed in *& of object so then
+//could use object->tracks[i] instead of *object.tracks[i]
 
 
 #include "WeeklyData.h"

@@ -18,21 +18,22 @@
 #include "trackmetricfactory.h"
 using namespace std;
 
-static const int NUMBER_OF_TRACKS = 1;
+
 class Track {
    friend ostream& operator<< (ostream&, const Track&);
 public:
-   
+   static const int NUMBER_OF_TRACKS = 1;
    Track();
    Track(string);
     ~Track();
+   Track& operator=(const Track&);
    
-   //set class data from data file
+   //sets Tracks with empty TrackMetric objects from data file
    //returns true if the data is set, false when bad data, i.e., is eof
-   //sets
    bool setPrimerData(istream&);
-  
    
+   //fills in the Track's empty TrackMetric objects with data from data file
+   //returns true if the data is set, false when bad data, i.e., is eof
    bool setRecordData(istream&);
   
    //print for the dataDescript followed by the trackMetricHolder
@@ -44,13 +45,11 @@ public:
    void printDataMemberNames() const;
    
    //returns dataDescription
-   string getDataDescription();
-   
-   
+   string getTrackDescription();
    
 private:
    TrackMetricFactory trackMetricFactory;
-   string dataDescription;
+   string trackDescription;
    vector<TrackMetric*> trackMetricHolder;
 };
 #endif /* Track_hpp */

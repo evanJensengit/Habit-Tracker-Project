@@ -17,7 +17,11 @@ TrackMetricFactory::TrackMetricFactory() {
       trackMetrics[i] = nullptr;
    }
    
-   trackMetrics [hash("Date")] = new Date();
+   trackMetrics [hash("date")] = new Date();
+   trackMetrics[hash("name")] = new Name();
+   trackMetrics[hash("yorn")] = new YOrN();
+   trackMetrics[hash("sleep")] = new Sleep();
+   trackMetrics[hash("amount")] = new Amount();
 
 }
 

@@ -34,15 +34,15 @@ WeeklyData::~WeeklyData() {
 
 void WeeklyData::setPrimerData(ifstream& file) {
    string line;
-   if (file.is_open())
-   {
+   if (file.is_open()) {
       singleDayData* day = new singleDayData(file);
       week[0] = day;
       for (int i = 1; i < WEEK_LENGTH - 1; i++) {
          //then have a copy constructor where we pass in Day
-        // week[i] = new singleDayData(day);
+         week[i] = new singleDayData(day);
          if (file.eof()) break;
       }
+   displayWeek();
    }
    else cout << "Unable to open file";
 }
@@ -57,10 +57,12 @@ void WeeklyData::sortAndLogData() {
    
 }
 //----------------------------------------------------------------------------
+//displayWeek
 void WeeklyData::displayWeek() {
-   for (int i = 0; i < WEEK_LENGTH; i++) {
-      week[i]->displayDay();
-   }
+cout << *this << endl;
+   //   for (int i = 0; i < WEEK_LENGTH; i++) {
+//      week[i]->displayDay();
+//   }
 }
 
 //----------------------------------------------------------------------------
