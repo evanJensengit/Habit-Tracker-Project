@@ -1,56 +1,56 @@
 //
-//  weekday.cpp
+//  name.cpp
 //  accountability_reader
 //
-//  Created by Evan Jensen on 12/30/20.
-//  Copyright © 2020 Evan Jensen. All rights reserved.
+//  Created by Evan Jensen on 1/2/21.
+//  Copyright © 2021 Evan Jensen. All rights reserved.
 //
 
-#include "weekday.h"
+#include "name.h"
 //----------------------------------------------------------------------------
 //operator<< overload
 //calls print(ostream&) method
-ostream & operator<<(ostream & output, const Weekday& weekdayObj) {
-   weekdayObj.print(output);
+ostream & operator<<(ostream & output, const Name & nameObj) {
+   nameObj.print(output);
    return output;
 }
 //----------------------------------------------------------------------------
 
-Weekday::Weekday() {
-   dayOfWeek = "";
-   dataDescription = "Weekday";
+Name::Name() {
+   dataDescription = "Amount";
+   theName = "";
    
 }
 //----------------------------------------------------------------------------
 
-Weekday::~Weekday() { }
+Name::~Name() { }
 
 
 //----------------------------------------------------------------------------
 
-bool Weekday::setData(istream &infile) {
-   getline(infile, dayOfWeek);
+bool Name::setData(string the_Name) {
+   theName = the_Name;
    return true;
 }
 
 //----------------------------------------------------------------------------
 //print method
-ostream& Weekday::print(ostream& output) const {
-   output << dataDescription << ": " << dayOfWeek;
+ostream& Name::print(ostream& output) const {
+   output << dataDescription << ": " << theName;
    return output;
 }
 //----------------------------------------------------------------------------
 
-void Weekday::printDataMemberNames() const {
+void Name::printDataMemberNames() const {
    cout << dataDescription << endl;
 }
 //----------------------------------------------------------------------------
 
-TrackMetric* Weekday::create() {
-   return new Weekday;
+TrackMetric* Name::create() {
+   return new Name;
 }
 //----------------------------------------------------------------------------
 
-string Weekday::getDataDescription() {
+string Name::getDataDescription() {
    return dataDescription;
 }

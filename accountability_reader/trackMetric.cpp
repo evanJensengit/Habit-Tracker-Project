@@ -7,3 +7,16 @@
 //
 
 #include "trackMetric.h"
+
+//----------------------------------------------------------------------------
+// operator<<
+ostream& operator<<(ostream& output, const TrackMetric& dataObj) {
+   dataObj.print(output);
+   return output;
+}
+
+TrackMetric::TrackMetric() { }
+
+TrackMetric::~TrackMetric() { }
+
+

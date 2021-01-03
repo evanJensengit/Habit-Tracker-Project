@@ -1,28 +1,28 @@
 //
-//  weekday.hpp
+//  YOrN.hpp
 //  accountability_reader
 //
-//  Created by Evan Jensen on 12/30/20.
-//  Copyright © 2020 Evan Jensen. All rights reserved.
+//  Created by Evan Jensen on 1/2/21.
+//  Copyright © 2021 Evan Jensen. All rights reserved.
 //
 
-#ifndef weekday_hpp
-#define weekday_hpp
+#ifndef YOrN_h
+#define YOrN_h
 
 #include "trackMetric.h"
 
 using namespace std;
 
-class Weekday : public TrackMetric {
-   friend ostream& operator<< (ostream&, const Weekday&);
+class YOrN : public TrackMetric {
+   friend ostream& operator<< (ostream&, const YOrN&);
    
 public:
-   Weekday(); //constructor
-   ~Weekday();
+   YOrN(); //constructor
+   ~YOrN();
    
    //set class data from data file
    //returns true if the data is set, false when bad data, i.e., is eof
-   virtual bool setData(istream&);
+   virtual bool setData(string);
    
    //helper for operator<< overload
    //concatenates data members year, month and day to ostream& object
@@ -36,10 +36,9 @@ public:
    
    virtual string getDataDescription();
    
+   string getYesOrNo() const;
 protected:
-   string dayOfWeek;
-   string dataDescription;
-};
+   string yesOrNo;
    
-
-#endif /* weekday_hpp */
+};
+#endif /* YOrN_hpp */

@@ -29,13 +29,18 @@ Sleep::~Sleep() { }
 
 
 //----------------------------------------------------------------------------
-
-bool Sleep::setData(istream &infile) {
-   string sleepTimes;
-   getline(infile, sleepTimes, '-');
-   bedTime = stoi(sleepTimes);
-   infile >> wakeTime;
-   getline(infile, sleepTimes);
+//setData
+//can add another method that takes in the sleep times, use some calculation
+//to discern if the sleep times are am/pm
+bool Sleep::setData(string theSleepTimes) {
+   string delimiter = "-";
+   string wakeTimeStr = theSleepTimes.substr(0, theSleepTimes.
+                                             find(delimiter));
+   wakeTime = stoi(wakeTimeStr);
+   
+   string bedTimeStr = theSleepTimes.substr(theSleepTimes.
+                                            find(delimiter)+1);
+   bedTime = stoi(bedTimeStr);
    
    return true;
 }

@@ -1,25 +1,24 @@
 //
-//  date.hpp
+//  name.hpp
 //  accountability_reader
 //
-//  Created by Evan Jensen on 12/23/20.
-//  Copyright © 2020 Evan Jensen. All rights reserved.
+//  Created by Evan Jensen on 1/2/21.
+//  Copyright © 2021 Evan Jensen. All rights reserved.
 //
 
-#ifndef date_h
-#define date_h
-
+#ifndef name_h
+#define name_h
 #include "trackMetric.h"
 
 using namespace std;
 
-class Date : public TrackMetric {
-   friend ostream& operator<< (ostream&, const Date&);
+class Name : public TrackMetric {
+   friend ostream& operator<< (ostream&, const Name&);
    
 public:
-   Date(); //constructor
-   ~Date();
-  
+   Name(); //constructor
+   ~Name();
+   
    //set class data from data file
    //returns true if the data is set, false when bad data, i.e., is eof
    virtual bool setData(string);
@@ -37,10 +36,10 @@ public:
    virtual string getDataDescription();
    
 protected:
-   int day;
-   int month;
-   int year;
-   string dataDescription;
+   string theName;
+   
    
 };
-#endif /* date_hpp */
+
+
+#endif /* name_hpp */

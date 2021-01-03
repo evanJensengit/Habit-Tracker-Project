@@ -12,7 +12,6 @@
 #include <iostream>
 #include "date.h"
 #include "sleep.h"
-#include "weekday.h"
 #include "trackMetric.h"
 #include <vector>
 using namespace std;

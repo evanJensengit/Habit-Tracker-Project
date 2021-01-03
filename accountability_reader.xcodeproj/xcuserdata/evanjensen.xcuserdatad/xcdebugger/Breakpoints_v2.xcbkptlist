@@ -87,22 +87,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D68EA2DA-D191-4657-8A28-E0CE76231E5B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "accountability_reader/date.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "Date::setData(infile)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "BA435BF7-E39A-4F6C-8554-6B618B76B6A9"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -110,9 +94,9 @@
             filePath = "accountability_reader/date.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "Date::setData(infile)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "Date::setData(theDate)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -30,9 +30,10 @@ Date::~Date() { }
 
 //----------------------------------------------------------------------------
 
-bool Date::setData(istream &infile) {
+bool Date::setData(string theDate) {
    string theMonth;
-   getline(infile, theMonth, '/');
+   string delimiter = "/";
+   theMonth = theDate.substr(0, theDate.find(delimiter));
    month = stoi(theMonth);
    if (month < 1 || month > 12) {
       cout << "Invalid month '" << year << "'" << endl;
@@ -40,15 +41,15 @@ bool Date::setData(istream &infile) {
       return false;
    }
  
-   infile >> day;
+   //+ 1 so it doesnt include the "/"
+  string theDay = theDate.substr(theDate.find(delimiter)+1);
+   day = stoi(theDay);
    
    if (day < 1 || day > 31) {
       cout << "Invalid day '" << day << "'" << endl;
       day = 0;
       return false;
    }
-   getline(infile, theMonth);
-   cout << theMonth;
    return true;
 }
 

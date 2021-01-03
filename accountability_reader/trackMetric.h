@@ -32,7 +32,7 @@ public:
    //based on the size of the vector of the int passed in, the
    //PASS IN AN INT SO THAT THE CHILDREN OF TRACKMETRIC KNOW HOW MANY TIMES TO INTERATE THROUGH THE FILE LINE AND THEN BASED ON THE INT ITERATE ONE LESS THAN THAT AMOUNT AND THEN TAKE THE REST OF THE LINE WITHOUT THE DELIMETER OF ","
    
-   virtual bool setData(istream&) = 0;
+   virtual bool setData(string) = 0;
    
    //print for the data members of child class with spacing for
    //organized output
@@ -50,7 +50,7 @@ public:
    
    
 protected:
-   int hash(string) const;
+   // int hash(string) const;
    string dataDescription;
 };
 

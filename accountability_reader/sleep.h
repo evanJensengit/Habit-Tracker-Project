@@ -22,7 +22,7 @@ public:
    
    //set class data from data file
    //returns true if the data is set, false when bad data, i.e., is eof
-   virtual bool setData(istream&);
+   virtual bool setData(string);
    
    //helper for operator<< overload
    //concatenates data members year, month and day to ostream& object
