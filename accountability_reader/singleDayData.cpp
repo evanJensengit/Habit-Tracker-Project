@@ -58,8 +58,8 @@ singleDayData::singleDayData(ifstream& infile) {
 }
 
 //----------------------------------------------------------------------------
-singleDayData::singleDayData(singleDayData*& toCopy) {
-   *this = *toCopy;
+singleDayData::singleDayData(const singleDayData& toCopy) {
+   *this = toCopy;
 }
 
 //----------------------------------------------------------------------------
@@ -67,7 +67,9 @@ singleDayData::singleDayData(singleDayData*& toCopy) {
 singleDayData& singleDayData::operator=(const singleDayData& toCopy) {
    if (&toCopy != this) {
       for (int i = 0; i < NUMBER_OF_TRACKS; i++) {
-         tracks[i] = toCopy.tracks[i];
+         cout << *toCopy.tracks[i];
+         tracks[i] = new Track(*toCopy.tracks[i]);
+         
       }
    }
    return *this;

@@ -35,11 +35,9 @@ public:
    virtual TrackMetric* create();
    
    virtual string getDataDescription();
-   
 protected:
    double amount;
    string metricOfAmount;
-   
 };
 
 #endif /* amount_hpp */

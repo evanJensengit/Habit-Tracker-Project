@@ -16,6 +16,7 @@
 #include <string>
 #include <iostream>
 #include "singleDayData.h"
+#include "trackmetricfactory.h"
 using namespace std;
 
 class WeeklyData {
@@ -31,6 +32,7 @@ public:
    
 
 private:
+   TrackMetricFactory trackMetricFactory;
    singleDayData* week[WEEK_LENGTH];
    string weekDate;
    void displayWeek();

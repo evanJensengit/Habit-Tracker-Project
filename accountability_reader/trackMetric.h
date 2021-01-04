@@ -48,7 +48,6 @@ public:
    virtual string getDataDescription() = 0;
    
    
-   
 protected:
    // int hash(string) const;
    string dataDescription;

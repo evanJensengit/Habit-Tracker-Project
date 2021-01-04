@@ -51,7 +51,7 @@ public:
    singleDayData();
    ~singleDayData();
    singleDayData(ifstream&);
-   singleDayData(singleDayData*&);
+   singleDayData(const singleDayData&);
    singleDayData& operator=(const singleDayData&);
    void displayDay();
    string* getDay();

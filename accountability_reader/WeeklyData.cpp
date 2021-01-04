@@ -37,9 +37,9 @@ void WeeklyData::setPrimerData(ifstream& file) {
    if (file.is_open()) {
       singleDayData* day = new singleDayData(file);
       week[0] = day;
-      for (int i = 1; i < WEEK_LENGTH - 1; i++) {
+      for (int i = 1; i < WEEK_LENGTH; i++) {
          //then have a copy constructor where we pass in Day
-         week[i] = new singleDayData(day);
+         week[i] = new singleDayData(*day);
          if (file.eof()) break;
       }
    displayWeek();

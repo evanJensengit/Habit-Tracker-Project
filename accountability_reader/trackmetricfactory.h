@@ -15,10 +15,11 @@
 #include "name.h"
 #include "YOrN.h"
 #include "amount.h"
-#include "trackMetric.h"
+
 #include <vector>
 using namespace std;
 
+class TrackMetric;
 
 class TrackMetricFactory {
 public:

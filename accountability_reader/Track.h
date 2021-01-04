@@ -25,6 +25,7 @@ public:
    static const int NUMBER_OF_TRACKS = 1;
    Track();
    Track(string);
+   Track(const Track&);
     ~Track();
    Track& operator=(const Track&);
    

@@ -25,9 +25,17 @@ Track::Track(string descript) {
    trackDescription = descript;
 }
 
+Track::Track(const Track& toCopy) {
+   *this = toCopy;
+}
+
 //----------------------------------------------------------------------------
 //destructor
 Track::~Track() {
+   for (int i = 0; i < trackMetricHolder.size(); i++) {
+      delete trackMetricHolder[i];
+      trackMetricHolder[i] = nullptr;
+   }
 }
 
 //----------------------------------------------------------------------------
@@ -36,8 +44,9 @@ Track::~Track() {
 Track& Track::operator=(const Track & toCopy) {
    if (&toCopy != this) {
      trackDescription = toCopy.trackDescription;
+      cout << trackDescription;
       for (int i = 0; i < toCopy.trackMetricHolder.size(); i++) {
-         trackMetricHolder[i] = toCopy.trackMetricHolder[i]->create();
+         trackMetricHolder.push_back(toCopy.trackMetricHolder[i]->create());
       }
    }
    return *this;
@@ -72,11 +81,18 @@ bool Track::setPrimerData(istream & infile) {
          }
          else {
             trackMetricHolder.push_back(ptr);
-           
-            //changing the original string from data file to be broken down to the next
-            //trackMetric object to be made in another iteration of loop
-            addCommatrackMetricList = addCommatrackMetricList.substr(found + 2);
+            
+            addCommatrackMetricList = addCommatrackMetricList.substr(found + 1);
+            if (addCommatrackMetricList.size() == 0 ) {
+               break;
+            }
+            else {
+               //changing the original string from data file to be broken down to the next
+               //trackMetric object to be made in another iteration of loop
+               addCommatrackMetricList = addCommatrackMetricList.substr(found + 1);
+            }
          }
+         
       }
       else {
          break;
@@ -129,7 +145,7 @@ bool Track::setRecordData(istream & infile) {
 ostream& Track::print(ostream& output) const {
    output << trackDescription << ":";
    for (int i = 0; i < trackMetricHolder.size(); i++) {
-      output << " " << trackMetricHolder[i] << ",";
+      output << " " << *trackMetricHolder[i] << ",";
    }
    return output;
 }

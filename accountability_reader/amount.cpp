@@ -64,3 +64,4 @@ TrackMetric* Amount::create() {
 string Amount::getDataDescription() {
    return dataDescription;
 }
+

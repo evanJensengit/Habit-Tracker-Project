@@ -56,7 +56,7 @@ TrackMetric* TrackMetricFactory::createTrackMetric(string c) const {
 //hash that and store it
 //then weekday is passed
 int TrackMetricFactory::hash(string c) const {
-   char charArray[c.size() + 1];
+   char charArray[c.size()];
    strcpy(charArray, c.c_str());
    int sum = 0;
    for (int i = 0; i < c.size() + 1; i++) {
@@ -70,7 +70,12 @@ int TrackMetricFactory::hash(string c) const {
    }
    //do this in case of collsion
  //  cout << tracks[sum]->getDataDescription() << endl;
-   if (c != trackMetrics[sum]->getDataDescription()) {
+   string dataDescript = trackMetrics[sum]->getDataDescription();
+   std::for_each(dataDescript.begin(),
+                 dataDescript.end(), [](char & c){
+      c = ::tolower(c);
+   });
+   if (c != dataDescript) {
       for (int i = 0; i < MAXSIZE;  i++) {
          sum += (i*i);
          sum = sum % MAXSIZE;
