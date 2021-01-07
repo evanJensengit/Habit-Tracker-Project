@@ -3,12 +3,14 @@ updated 01/05/21
 
 accountabilityReader purpose is to take in a primer.txt file with format: 
 
-Date: Date. 
-
+Date: Date
 
 Weekday: name
+
 Wrkt: YOrN
+
 Bedtime/wake up: sleep
+
 Chapters of bible read: YOrN, Amount
 Study csci: YOrN, Amount
 Therapy work: YOrN, name, Amount
