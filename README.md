@@ -38,7 +38,7 @@ Expression: y singing
 Caffeine: 200 mg
 Sugar: waffles, mommas chocolate
 
-The above from "Date: ... Sugar:" is one "Day" object. A week is made up of seven Day objects.
+The above from "Date: .... Sugar:" is one "Day" object. A week is made up of seven Day objects.
 The goal of this program is to use the record.txt file to create Day objects within a Week object and 
 display the contents of that week. In the above case it would be how much sugar the user had that week, how many times they worked out etc
 
