@@ -3,22 +3,20 @@ updated 01/05/21
 
 accountabilityReader purpose is to take in a primer.txt file with format: 
 
-Date: Date 
-
-Weekday: name
-
-Wrkt: YOrN
-Bedtime/wake up: sleep
-Chapters of bible read: YOrN, Amount
-Study csci: YOrN, Amount
-Therapy work: YOrN, name, Amount
-Meditation: YOrN, name 
-Full body stretching: YOrN
-Connection: YOrN, Amount
-Journaling: YOrN, Amount
-videogames: YOrN, Amount
-Expression: YOrN, Amount
-Caffeine: Amount
+Date: Date \
+Weekday: name\
+Wrkt: YOrN\
+Bedtime/wake up: sleep\
+Chapters of bible read: YOrN, Amount\
+Study csci: YOrN, Amount\
+Therapy work: YOrN, name, Amount\
+Meditation: YOrN, name \
+Full body stretching: YOrN\
+Connection: YOrN, Amount\
+Journaling: YOrN, Amount\
+videogames: YOrN, Amount\
+Expression: YOrN, Amount\
+Caffeine: Amount\
 
 This primer file is used to prime the program to take in a record.txt that contains things the user wants to track in a
 file with the similar pattern of the Tracks and TrackMetrics in the primer.txt. 
