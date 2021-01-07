@@ -1,0 +1,15 @@
+Date: Date
+Weekday: name
+Wrkt: YOrN
+Bedtime/wake up: sleep
+Chapters of bible read: YOrN, Amount
+Study csci: YOrN, Amount
+Therapy work: YOrN, name, Amount
+Meditation: YOrN, name 
+Full body stretching: YOrN
+Connection: YOrN, Amount
+Journaling: YOrN, Amount
+videogames: YOrN, Amount
+Expression: YOrN, Amount
+Masturbation: YOrN, Amount
+Caffeine: Amount
