@@ -23,20 +23,20 @@ file with the similar pattern of the Tracks and TrackMetrics in the primer.txt.
 A Track object is the string to the left of the ":" and the
 TrackMetric(s) is what is on the right side of the ":"
 
-Date: 1/4
-Weekday: mon
-Wrkt: y strength
-Bedtime/wake up: 1-9 
-Study csci: y class
-Therapy work: n
-Meditation: y 20 mins breath
-Full body stretching: y 2x
-Connection: y call maur, call jason, meeting 
-Journaling: y
-videogames: y chess 20 min
-Expression: y singing
-Caffeine: 200 mg
-Sugar: waffles, mommas chocolate
+Date: 1/4\
+Weekday: mon\
+Wrkt: y strength\
+Bedtime/wake up: 1-9 \
+Study csci: y class\
+Therapy work: n\
+Meditation: y 20 mins breath\
+Full body stretching: y 2x\
+Connection: y call maur, call jason, meeting \
+Journaling: y\
+videogames: y chess 20 min\
+Expression: y singing\
+Caffeine: 200 mg\
+Sugar: waffles, mommas chocolate\
 
 The above from "Date: .... Sugar:" is one "Day" object. A week is made up of seven Day objects.
 The goal of this program is to use the record.txt file to create Day objects within a Week object and 
