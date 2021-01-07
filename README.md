@@ -23,6 +23,8 @@ file with the similar pattern of the Tracks and TrackMetrics in the primer.txt.
 A Track object is the string to the left of the ":" and the
 TrackMetric(s) is what is on the right side of the ":"
 
+i.e Caffeine is the "Track" and the Amount is the "TrackMetric"
+
 Date: 1/4\
 Weekday: mon\
 Wrkt: y strength\
