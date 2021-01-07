@@ -16,7 +16,7 @@ Connection: YOrN, Amount\
 Journaling: YOrN, Amount\
 videogames: YOrN, Amount\
 Expression: YOrN, Amount\
-Caffeine: Amount\
+Caffeine: Amount
 
 This primer file is used to prime the program to take in a record.txt that contains things the user wants to track in a
 file with the similar pattern of the Tracks and TrackMetrics in the primer.txt. 
@@ -36,7 +36,7 @@ Journaling: y\
 videogames: y chess 20 min\
 Expression: y singing\
 Caffeine: 200 mg\
-Sugar: waffles, mommas chocolate\
+Sugar: waffles, mommas chocolate
 
 The above from "Date: .... Sugar:" is one "Day" object. A week is made up of seven Day objects.
 The goal of this program is to use the record.txt file to create Day objects within a Week object and 
