@@ -15,8 +15,8 @@
 #include "name.h"
 #include "YOrN.h"
 #include "amount.h"
-
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 class TrackMetric;

@@ -44,7 +44,7 @@ Track::~Track() {
 Track& Track::operator=(const Track & toCopy) {
    if (&toCopy != this) {
      trackDescription = toCopy.trackDescription;
-      cout << trackDescription;
+//      cout << trackDescription;
       for (int i = 0; i < toCopy.trackMetricHolder.size(); i++) {
          trackMetricHolder.push_back(toCopy.trackMetricHolder[i]->create());
       }
@@ -71,7 +71,7 @@ bool Track::setPrimerData(istream & infile) {
       if (found != string::npos) {
          trackMetricFromList =
                         addCommatrackMetricList.substr(0, found);
-         cout << trackMetricFromList << endl;
+      //   cout << trackMetricFromList << endl;
          TrackMetric* ptr = trackMetricFactory.
                            createTrackMetric(trackMetricFromList);
         //null ptr when the trackMetric does not exist in trackMetricFactory
@@ -143,9 +143,14 @@ bool Track::setRecordData(istream & infile) {
 //----------------------------------------------------------------------------
 //print
 ostream& Track::print(ostream& output) const {
-   output << trackDescription << ":";
+   //output << trackDescription << ":";
    for (int i = 0; i < trackMetricHolder.size(); i++) {
-      output << " " << *trackMetricHolder[i] << ",";
+      if ( i != trackMetricHolder.size() - 1) {
+         output << *trackMetricHolder[i] << ",";
+
+      }
+      else
+         output << *trackMetricHolder[i];
    }
    return output;
 }

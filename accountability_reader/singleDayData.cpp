@@ -67,7 +67,7 @@ singleDayData::singleDayData(const singleDayData& toCopy) {
 singleDayData& singleDayData::operator=(const singleDayData& toCopy) {
    if (&toCopy != this) {
       for (int i = 0; i < NUMBER_OF_TRACKS; i++) {
-         cout << *toCopy.tracks[i];
+//         cout << *toCopy.tracks[i];
          tracks[i] = new Track(*toCopy.tracks[i]);
          
       }
