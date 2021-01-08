@@ -1,5 +1,7 @@
 # accountabilityReader
-updated 01/05/21
+updated 01/05/21 
+
+Full project at: https://github.com/evanJensengit/accountabilityReader
 
 accountabilityReader purpose is to take in a primer.txt file with format: 
 
@@ -45,3 +47,6 @@ The goal of this program is to use the record.txt file to create Day objects wit
 display the contents of that week. In the above case it would be how much sugar the user had that week, how many times they worked out etc
 
 As of 01/05/21 The program takes in the primer.txt file and creates a skeloton of empty day objects to be filled in by the record.txt file.
+
+I applied to:
+"Internship Opportunities for Students – Garage Software Engineer Redmond-Washington-United States | Job number : 870952"
