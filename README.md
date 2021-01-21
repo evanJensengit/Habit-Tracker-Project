@@ -48,5 +48,3 @@ display the contents of that week. In the above case it would be how much sugar 
 
 As of 01/05/21 The program takes in the primer.txt file and creates a skeloton of empty day objects to be filled in by the record.txt file.
 
-I applied to:
-"Internship Opportunities for Students – Garage Software Engineer Redmond-Washington-United States | Job number : 870952"
