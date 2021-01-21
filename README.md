@@ -20,8 +20,8 @@ videogames: YOrN, Amount\
 Expression: YOrN, Amount\
 Caffeine: Amount
 
-This primer file is used to prime the program to take in a record.txt that contains things the user wants to track in a
-file with the similar pattern of the Tracks and TrackMetrics in the primer.txt. 
+This primer file is used to "prime" the program to take in "record.txt", that contains "Tracks" 
+(activities and things that user wants to track), file with the similar pattern of the Tracks and TrackMetrics in the primer.txt. 
 A Track object is the string to the left of the ":" and the
 TrackMetric(s) is what is on the right side of the ":"
 
