@@ -1,4 +1,4 @@
-# accountabilityReader
+# Habit Tracker
 updated 01/05/21 
 
 Full project at: https://github.com/evanJensengit/accountabilityReader
