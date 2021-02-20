@@ -1,6 +1,9 @@
+
+
 # Habit Tracker
 updated 01/05/21 
-
+This is the beginning of the backend code to implement a Habit Tracker app which allows\
+users to easily track habits and customize the habits they want to track.\
 Full project at: https://github.com/evanJensengit/accountabilityReader
 
 accountabilityReader purpose is to take in a primer.txt file with format: 
