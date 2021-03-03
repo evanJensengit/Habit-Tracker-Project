@@ -40,7 +40,8 @@ Track::~Track() {
 
 //----------------------------------------------------------------------------
 //operator= overload
-//the passed Track object must have the same number of Tracks as
+//the passed Track object must have the same number of Tracks as the calling
+//track object
 Track& Track::operator=(const Track & toCopy) {
    if (&toCopy != this) {
      trackDescription = toCopy.trackDescription;

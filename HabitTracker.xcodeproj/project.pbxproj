@@ -71,7 +71,7 @@
 		CE562E1A2509F58700C50C25 = {
 			isa = PBXGroup;
 			children = (
-				CE562E252509F58700C50C25 /* accountability_reader */,
+				CE562E252509F58700C50C25 /* HabitTracker */,
 				CE562E242509F58700C50C25 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,7 +84,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE562E252509F58700C50C25 /* accountability_reader */ = {
+		CE562E252509F58700C50C25 /* HabitTracker */ = {
 			isa = PBXGroup;
 			children = (
 				CE562E262509F58700C50C25 /* main.cpp */,
@@ -109,7 +109,7 @@
 				CE6FD05325A1189A00FCE02E /* YOrN.cpp */,
 				CE6FD05425A1189A00FCE02E /* YOrN.h */,
 			);
-			path = accountability_reader;
+			path = HabitTracker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +146,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE562E1E2509F58700C50C25 /* Build configuration list for PBXProject "accountability_reader" */;
+			buildConfigurationList = CE562E1E2509F58700C50C25 /* Build configuration list for PBXProject "HabitTracker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -318,7 +318,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE562E1E2509F58700C50C25 /* Build configuration list for PBXProject "accountability_reader" */ = {
+		CE562E1E2509F58700C50C25 /* Build configuration list for PBXProject "HabitTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE562E282509F58700C50C25 /* Debug */,

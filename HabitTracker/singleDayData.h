@@ -43,7 +43,7 @@
 
 using namespace std;
 
-static const int NUMBER_OF_TRACKS = 1;
+static const int NUMBER_OF_TRACKS = 1; //how many habits I want to track per day
 class singleDayData {
    friend ostream& operator<<(ostream&, const singleDayData& );
 public:
@@ -56,7 +56,7 @@ public:
    void displayDay();
    string* getDay();
 private:
-   Track* tracks[NUMBER_OF_TRACKS];
+   Track* tracks[NUMBER_OF_TRACKS]; //array holding track objects
    singleDayData copy(const singleDayData&);
 };
 

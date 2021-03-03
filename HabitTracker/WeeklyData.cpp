@@ -35,7 +35,7 @@ WeeklyData::~WeeklyData() {
 void WeeklyData::setPrimerData(ifstream& file) {
    string line;
    if (file.is_open()) {
-      singleDayData* day = new singleDayData(file);
+      singleDayData* day = new singleDayData(file); //why am I making this here
       week[0] = day;
       for (int i = 1; i < WEEK_LENGTH; i++) {
          //then have a copy constructor where we pass in Day

@@ -21,11 +21,11 @@ using namespace std;
 
 int main() {
   
-   ifstream(myfile1)("primer.txt");
+   ifstream(myfile1)("primer.txt");// creates a ifstream object connected to the data in primer.txt
 
    WeeklyData theWeek;
-   theWeek.setPrimerData(myfile1);
-   ifstream myfile2 ("justDate.txt");
+   theWeek.setPrimerData(myfile1);//takes in primer.txt to prime the program to read in the habits the user wants to track
+   ifstream myfile2 ("justDate.txt"); //data file with just the dates
    theWeek.setRecordData(myfile2);
 
    myfile1.close();

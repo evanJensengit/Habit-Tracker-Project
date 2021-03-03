@@ -51,6 +51,6 @@ public:
 private:
    TrackMetricFactory trackMetricFactory;
    string trackDescription;
-   vector<TrackMetric*> trackMetricHolder;
+   vector<TrackMetric*> trackMetricHolder; //array holding track metric objects 
 };
 #endif /* Track_hpp */
