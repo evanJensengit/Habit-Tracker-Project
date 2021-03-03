@@ -14,8 +14,8 @@ track my habits. This word document has been in this format:\
 Date \
 Weekday \ 
 Wrkt \
-Bedtime/wake up\
-Study csci\
+Bedtime/wake up \
+Study csci \
 
 and the list goes on like this. I copy and paste the prompts I listed above\
 to track my habits for subsequent days. The problem that I have with this is that I dont like\
@@ -24,7 +24,7 @@ and when I say "click" I mean I don't like literally having to move my finger an
 For example if I am typing in data for "Date:" on my mobile device I have to click to the right of\
 "Date:" and then type in "month/day". To enter data for the next line I have to move my finger and\
 click to the right of "Weekday:" and then type in "<weekday>". To enter data for the next line\
-I have to move my finger and click to the right of "Wrkt:" ... you get the picture.\ 
+I have to move my finger and click to the right of "Wrkt:" ... you get the picture\ 
 So, to save myself the monotany of having to click every time I want to enter new data for a habit that\
 I want to track, I am creating this Habit Tracker Program to automate this task.\
   
