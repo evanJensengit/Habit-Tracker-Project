@@ -11,16 +11,16 @@ I have used various habit tracking software in the past to track my habits and i
 I am a VERY lazy user of these apps and do not like clicking around on my phone everytime I want\
 to update one of my habits. From July 2020 to March 2021 I have been using a word document to\
 track my habits. This word document has been in this format:\
-Date:\
-Weekday:\ 
-Wrkt: \ 
-Bedtime/wake up:\ 
-Study csci:\
-...\
+Date\
+Weekday\ 
+Wrkt \ 
+Bedtime/wake up\ 
+Study csci\
+
 and the list goes on like this. I copy and paste the prompts I listed above\
 to track my habits for subsequent days. The problem that I have with this is that I dont like\
 having to click the next line each time I am done updating the habit information for that day\
-and when I say "click" I mean I don't like literally having to move my finger and tap the line below.\
+and when I say "click" I mean I don't like literally having to move my finger and tap the line below. \
 For example if I am typing in data for "Date:" on my mobile device I have to click to the right of\
 "Date:" and then type in "month/day". To enter data for the next line I have to move my finger and\
 click to the right of "Weekday:" and then type in "<weekday>". To enter data for the next line\
