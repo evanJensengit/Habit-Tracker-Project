@@ -4,7 +4,7 @@
 updated 01/05/21
 
 This is the beginning of the backend code to implement a Habit Tracker app which allows\
-users to easily track habits and customize the habits they want to track.\
+users to easily track habits and customize the habits they want to track.
 
 Here is why I am building this program:\
 I have used various habit tracking software in the past to track my habits and it has been too difficult for me.\
