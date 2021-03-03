@@ -11,10 +11,10 @@ I have used various habit tracking software in the past to track my habits and i
 I am a VERY lazy user of these apps and do not like clicking around on my phone everytime I want\
 to update one of my habits. From July 2020 to March 2021 I have been using a word document to\
 track my habits. This word document has been in this format:\
-Date\
-Weekday\ 
-Wrkt \ 
-Bedtime/wake up\ 
+Date \
+Weekday \ 
+Wrkt \
+Bedtime/wake up\
 Study csci\
 
 and the list goes on like this. I copy and paste the prompts I listed above\
